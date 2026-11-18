@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.sky{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #020111, #191970);
+    position: relative;
+}
+.mtvare{
+    position: absolute;
+    right:  25%;
+    font-size: 60px;
+    animation: mtvare  10s infinite ease-in-out;
+    top: 10%;
+}
+@keyframes mtvare {
+    from{
+       transform: translate(0,0);
+    }
+    to{
+        transform: translate(300px) rotate(360deg);
+    }
+    
+}
+.varsklavebi {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.star {
+    position: absolute;
+    font-size: 25px;
+    animation-name: star;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+}
+
+
+.star:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+.star:nth-child(2) {
+    top: 30%;
+    left: 45%;
+     animation-delay: 0.5s;
+}
+
+
+.star:nth-child(3) {
+    top: 60%;
+    left: 75%;
+     animation-delay: 1s;
+
+}
+
+
+.star:nth-child(4) {
+    top: 80%;
+    left: 25%;
+     animation-delay: 1.5s;
+}
+
+
+.star:nth-child(5) {
+    top: 45%;
+    left: 90%;
+     animation-delay: 2s;
+}
+
+@keyframes star {
+    0% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
