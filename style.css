@@ -1,80 +1,96 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-
-.sky{
+.sky {
     width: 100%;
     height: 100vh;
     background: linear-gradient(to bottom, #020111, #191970);
     position: relative;
+    overflow: hidden;
 }
-.mtvare{
+
+
+
+ h1 {
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    opacity: 0;
+
+    animation-name: satauri;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes satauri {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.mtvarecont {
     position: absolute;
-    right:  25%;
-    font-size: 60px;
-    animation: mtvare  10s infinite ease-in-out;
+    right: 25%;
     top: 10%;
+    z-index: 2; 
+
+    animation-name: mtvare;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
+
 @keyframes mtvare {
-    from{
-       transform: translate(0,0);
+    0% {
+        transform: translate(0, 0) rotate(0deg);
     }
-    to{
-        transform: translate(300px) rotate(360deg);
+
+    100% {
+        transform: translate(300px, 0) rotate(360deg);
     }
-    
 }
+
+
+
+.mtvare {
+    font-size: 60px;
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+.mtvare:hover {
+    transform: scale(1.5);
+}
+
+
 .varsklavebi {
     position: absolute;
     width: 100%;
     height: 100%;
+    pointer-events: none; 
 }
+
 
 .star {
     position: absolute;
     font-size: 25px;
+
     animation-name: star;
-animation-duration: 2s;
-animation-iteration-count: infinite;
-animation-timing-function: ease-in-out;
-}
-
-
-.star:nth-child(1) {
-    top: 10%;
-    left: 10%;
-    animation-delay: 0s;
-}
-.star:nth-child(2) {
-    top: 30%;
-    left: 45%;
-     animation-delay: 0.5s;
-}
-
-
-.star:nth-child(3) {
-    top: 60%;
-    left: 75%;
-     animation-delay: 1s;
-
-}
-
-
-.star:nth-child(4) {
-    top: 80%;
-    left: 25%;
-     animation-delay: 1.5s;
-}
-
-
-.star:nth-child(5) {
-    top: 45%;
-    left: 90%;
-     animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes star {
@@ -89,4 +105,48 @@ animation-timing-function: ease-in-out;
     100% {
         opacity: 0.2;
     }
+}
+
+
+
+.star:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+
+
+
+.star:nth-child(2) {
+    top: 30%;
+    left: 45%;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+}
+
+
+.star:nth-child(3) {
+    top: 60%;
+    left: 75%;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+}
+
+
+
+.star:nth-child(4) {
+    top: 80%;
+    left: 25%;
+    animation-duration: 4s;
+    animation-delay: 1.5s;
+}
+
+
+
+.star:nth-child(5) {
+    top: 45%;
+    left: 90%;
+    animation-duration: 2.5s;
+    animation-delay: 2s;
 }
